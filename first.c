@@ -20,34 +20,87 @@ amount of payment can be edited
  Search records – search for added/updated records in file
  Delete records – removes data permanently from file
 This project is limited to the functions aforementioned. You can add new features as you
-like to make this project a better one.
-*/
+like to make this project a better one.*/
 
 #include <stdio.h>
+#include <ctype.h> //for toupper
+#include <stdlib.h> //for exit
+void unlist();
+void search();
+void payment();
+void modify();
+void list();
+void add();
 int main()
 {
-   // printf() displays the string inside quotation
-   printf("Hello, World!");
-   return 0;
+char choice;
+   printf("\n\t\t------WELCOME TO THE TELECOM BILLING MANAGEMENT SYSTEM---");
+
+   while (1)
+   {
+      printf("\n Enter\n A : for adding new records.\n L : for list of records \n M : for modifying records.\n P : for payment \n S : for searching records. \n D : for deleting records.\n E : for exit\n ");
+      choice = getchar();
+      choice = toupper(choice);
+      switch (choice)
+      {
+      case 'P':
+         payment();
+         break;
+      case 'A':
+         add();
+         break;
+      case 'L':
+         list();
+         break;
+      case 'M':
+         modify();
+         break;
+      case 'S':
+         search();
+         break;
+      case 'D':
+         unlist();
+         break;
+      case 'E':
+         printf("\n\n\t\t\t\tTHANK YOU");
+         printf("\n\n\n\n\n:\n\tFOR USING OUR SERVICE");
+         getchar();
+         exit(0);
+         break;
+      default:
+
+         printf("Incorrect Input");
+         printf("\nAny key to continue");
+         getch();
+         return 0;
+      }
+   }
 }
 
 void add()
 { //add record
+   printf("OKay");
 }
 void list()
-{ //list record
+{
+   printf("OKay"); //list record
 }
 void modify()
-{ //modify records
-}
-void payment_due()
 {
+   printf("OKay"); //modify records
+}
+void payment()
+{
+   printf("OKay");
    //void due
 }
-void search(){
+void search()
+{
+   printf("OKay");
    //search
 }
 void unlist()
 {
+   printf("Delete check");
    //delete record
 }
