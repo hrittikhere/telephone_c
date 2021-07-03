@@ -33,74 +33,85 @@ void list();
 void add();
 int main()
 {
-char choice;
-   printf("\n\t\t------WELCOME TO THE TELECOM BILLING MANAGEMENT SYSTEM---");
+	char choice;
+	printf("\n\t\t------WELCOME TO THE TELECOM BILLING MANAGEMENT SYSTEM---");
 
-   while (1)
-   {
-      printf("\n Enter\n A : for adding new records.\n L : for list of records \n M : for modifying records.\n P : for payment \n S : for searching records. \n D : for deleting records.\n E : for exit\n ");
-      choice = getchar();
-      choice = toupper(choice);
-      switch (choice)
-      {
-      case 'P':
-         payment();
-         break;
-      case 'A':
-         add();
-         break;
-      case 'L':
-         list();
-         break;
-      case 'M':
-         modify();
-         break;
-      case 'S':
-         search();
-         break;
-      case 'D':
-         unlist();
-         break;
-      case 'E':
-         printf("\n\n\t\t\t\tTHANK YOU");
-         printf("\n\n\n\n\n:\n\tFOR USING OUR SERVICE");
-         getchar();
-         exit(0);
-         break;
-      default:
-
-         printf("Incorrect Input");
-         printf("\nAny key to continue");
-         getch();
-         return 0;
-      }
-   }
+	while (1)
+	{
+		printf("\n Enter\n A : for adding new records.\n L : for list of records \n M : for modifying records.\n P : for payment \n S : for searching records. \n D : for deleting records.\n E : for exit\n ");
+		choice = getchar();
+		choice = toupper(choice);
+		switch (choice)
+		{
+		case 'P':
+			payment();
+			break;
+		case 'A':
+			add();
+			break;
+		case 'L':
+			list();
+			break;
+		case 'M':
+			modify();
+			break;
+		case 'S':
+			search();
+			break;
+		case 'D':
+			unlist();
+			break;
+		case 'E':
+			printf("\n\n\t\t\t\tTHANK YOU");
+			getch();
+			exit(0);
+			break;
+		default:
+			printf("Incorrect Input");
+			printf("\n Press any key to continue");
+			getch();
+			// return 1;
+			// break;
+		
+		}
+	}
 }
 
 void add()
 { //add record
-   printf("OKay");
+	printf("OKay");
+	getch();
 }
 void list()
 {
-   printf("OKay"); //list record
+	printf("OKay");
+	getch();
+	//list record
 }
 void modify()
 {
-   printf("OKay"); //modify records
+	printf("OKay");
+	getch();
+	//modify records
 }
 void payment()
 {
-   printf("OKay");
-   //void due
+	printf("OKay");
+	getch();
+
+	//void due
 }
 void search()
 {
-   printf("OKay");
-   //search
+	printf("OKay");
+	getch();
+
+	//search
 }
 void unlist()
 {
-   printf("Delete check");
-   //delete record
+	printf("Delete check");
+	getch();
+
+	//delete record
 }
