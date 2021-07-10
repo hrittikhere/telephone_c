@@ -48,16 +48,10 @@ int main()
 	char choice;
 
 	system("cls");
-	system("color 0");
-	gotoxy(10, 2);
-	system("cls");
-	system("color 0F");
-	gotoxy(0, 2);
 	printf("\t\t****************************************************************");
 	printf("\n\t\t  ------WELCOME TO THE TELECOM BILLING MANAGEMENT SYSTEM------");
 	printf("\n\t\t****************************************************************");
 	printf("\n\n\n\t\t Press Any Key To Continue. . ");
-	Sleep(0);
 	getch();
 	system("cls");
 
