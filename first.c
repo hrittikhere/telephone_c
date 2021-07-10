@@ -24,8 +24,8 @@ like to make this project a better one.*/
 
 #include <stdio.h>
 #include <stdlib.h> //for exit
-#include <conio.h>
-#include <windows.h>
+#include <conio.h> //for getche() 
+#include <string.h> //for strcmp
 
 
 struct subscriber
@@ -34,7 +34,6 @@ struct subscriber
 	char name[50];
 	float amount;
 } s;
-void gotoxy(int, int);
 void addrecords();
 void listrecords();
 void modifyrecords();
@@ -48,16 +47,10 @@ int main()
 	char choice;
 
 	system("cls");
-	system("color 0");
-	gotoxy(10, 2);
-	system("cls");
-	system("color 0F");
-	gotoxy(0, 2);
 	printf("\t\t****************************************************************");
 	printf("\n\t\t  ------WELCOME TO THE TELECOM BILLING MANAGEMENT SYSTEM------");
 	printf("\n\t\t****************************************************************");
 	printf("\n\n\n\t\t Press Any Key To Continue. . ");
-	Sleep(0);
 	getch();
 	system("cls");
 
@@ -100,28 +93,11 @@ int main()
 			break;
 		default:
 			system("cls");
-			system("color 0F");
-			gotoxy(30, 20);
-			printf("Incorrect Input");
-			printf("\a......");
-			gotoxy(30, 24);
-			printf("Any key to continue");
+			printf("Incorrect Input \n");
+			printf("Press Any key to continue");
 			getch();
 		}
 	}
-}
-COORD coord = {0, 0};
-// sets coordinates to 0,0
-//COORD max_buffer_size = GetLargestConsoleWindowSize(hOut);
-COORD max_res, cursor_size;
-void gotoxy(int x, int y)
-{
-
-	coord.X = x;
-	coord.Y = y;
-	// X and Y coordinates
-
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
 void addrecords()
