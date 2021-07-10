@@ -94,12 +94,8 @@ int main()
 			break;
 		default:
 			system("cls");
-			system("color 0F");
-			gotoxy(30, 20);
-			printf("Incorrect Input");
-			printf("\a......");
-			gotoxy(30, 24);
-			printf("Any key to continue");
+			printf("Incorrect Input \n");
+			printf("Press Any key to continue");
 			getch();
 		}
 	}
