@@ -24,8 +24,8 @@ like to make this project a better one.*/
 
 #include <stdio.h>
 #include <stdlib.h> //for exit
-#include <conio.h>
-#include <windows.h>
+#include <conio.h> //for getche() 
+#include <string.h> //for strcmp
 
 
 struct subscriber
@@ -34,7 +34,6 @@ struct subscriber
 	char name[50];
 	float amount;
 } s;
-void gotoxy(int, int);
 void addrecords();
 void listrecords();
 void modifyrecords();
@@ -99,19 +98,6 @@ int main()
 			getch();
 		}
 	}
-}
-COORD coord = {0, 0};
-// sets coordinates to 0,0
-//COORD max_buffer_size = GetLargestConsoleWindowSize(hOut);
-COORD max_res, cursor_size;
-void gotoxy(int x, int y)
-{
-
-	coord.X = x;
-	coord.Y = y;
-	// X and Y coordinates
-
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
 void addrecords()
