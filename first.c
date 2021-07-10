@@ -24,9 +24,9 @@ like to make this project a better one.*/
 
 #include <stdio.h>
 #include <stdlib.h> //for exit
-#include <conio.h> //for getche() 
+<<<<<<< HEAD
+#include <conio.h>	//for getche()
 #include <string.h> //for strcmp
-
 
 struct subscriber
 {
@@ -34,13 +34,18 @@ struct subscriber
 	char name[50];
 	float amount;
 } s;
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> main
 void addrecords();
 void listrecords();
 void modifyrecords();
 void deleterecords();
 void searchrecords();
 void payment();
-char get;
 int main()
 {
 	int phonenumber;
