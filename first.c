@@ -27,6 +27,7 @@ like to make this project a better one.*/
 #include <conio.h>	//for getche()
 #include <string.h> //for strcmp
 
+
 struct subscriber
 {
 	char phonenumber[20];
@@ -34,12 +35,17 @@ struct subscriber
 	float amount;
 } s;
 
+
+
 void addrecords();
 void listrecords();
 void modifyrecords();
 void deleterecords();
 void searchrecords();
 void payment();
+
+
+
 int main()
 {
 	int phonenumber;
