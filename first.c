@@ -22,11 +22,10 @@ amount of payment can be edited
 This project is limited to the functions aforementioned. You can add new features as you
 like to make this project a better one.*/
 
-#include <stdio.h> // for file related
+#include <stdio.h>	// for file related
 #include <stdlib.h> //for exit
 #include <conio.h>	//for getche()
 #include <string.h> //for strcmp
-
 
 struct subscriber
 {
@@ -35,16 +34,12 @@ struct subscriber
 	float amount;
 } s;
 
-
-
 void addrecords();
 void listrecords();
 void modifyrecords();
 void deleterecords();
 void searchrecords();
 void payment();
-
-
 
 int main()
 {
@@ -107,9 +102,9 @@ int main()
 
 void addrecords()
 {
-	FILE *f;  // holds address of the file (memory allocation)
+	FILE *f; // holds address of the file (memory allocation)
 	char test;
-	f = fopen("pro.txt", "ab+");  // used to open a file and in sucess returns location of file or null pointer
+	f = fopen("pro.txt", "ab+"); // used to open a file and in sucess returns location of file or null pointer
 	// Append; open or create file for update, writing at end-of-file. ab+
 	if (f == 0)
 	{
@@ -134,7 +129,7 @@ void addrecords()
 		printf("\n\n Record Is Successfully Added");
 		printf("\n Press esc Key to exit or Press any other key to add other record:");
 		test = getche();
-		if (test == 27)
+		if (test == 27) //ascii
 			break;
 	}
 	fclose(f);
@@ -168,10 +163,10 @@ void deleterecords()
 	FILE *f, *t;
 	char phonenumber[20];
 	system("cls");
-// r+ or rb+ or r+b
-// Open file for update (reading and writing).
-// w+ or wb+ or w+b
-// Truncate to zero length or create file for update.
+	// r+ or rb+ or r+b
+	// Open file for update (reading and writing).
+	// w+ or wb+ or w+b
+	// Truncate to zero length or create file for update.
 	f = fopen("pro.txt", "rb+");
 	t = fopen("pro1.txt", "wb+");
 	do
