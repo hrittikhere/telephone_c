@@ -144,7 +144,7 @@ void listrecords()
 {
 	FILE *f;
 	int i;
-	if ((f = fopen("pro.txt", "rb")) == NULL)
+	if ((f = fopen("pro.txt", "rb")) == NULL) //Open file for reading.
 		exit(0);
 	system("cls");
 	printf("Phone Number\t\tUser Name\tAmount\n");
@@ -168,6 +168,10 @@ void deleterecords()
 	FILE *f, *t;
 	char phonenumber[20];
 	system("cls");
+// r+ or rb+ or r+b
+// Open file for update (reading and writing).
+// w+ or wb+ or w+b
+// Truncate to zero length or create file for update.
 	f = fopen("pro.txt", "rb+");
 	t = fopen("pro1.txt", "wb+");
 	do
