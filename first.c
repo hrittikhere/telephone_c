@@ -22,7 +22,7 @@ amount of payment can be edited
 This project is limited to the functions aforementioned. You can add new features as you
 like to make this project a better one.*/
 
-#include <stdio.h>
+#include <stdio.h> // for file related
 #include <stdlib.h> //for exit
 #include <conio.h>	//for getche()
 #include <string.h> //for strcmp
@@ -107,9 +107,10 @@ int main()
 
 void addrecords()
 {
-	FILE *f;
+	FILE *f;  // holds address of the file (memory allocation)
 	char test;
-	f = fopen("pro.txt", "ab+");
+	f = fopen("pro.txt", "ab+");  // used to open a file and in sucess returns location of file or null pointer
+	// Append; open or create file for update, writing at end-of-file. ab+
 	if (f == 0)
 	{
 		f = fopen("pro.txt", "wb+");
